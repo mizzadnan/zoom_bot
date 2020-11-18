@@ -388,13 +388,3 @@ elif current_day == "Thursday":
             third = True
         else:
             continue
-
-
-
-
-
-
-
-
-
-
