@@ -64,7 +64,7 @@ if current_day == "Saturday":
     while not second:
         current_hour = now.strftime("%H")
         current_minute = int(now.strftime("%M"))
-        if current_hour == "11" or current_hour == "12" and current_minute >= 50 or current_minute <= 30:
+        if (current_hour == "11" and current_minute >= 50) or (current_hour == "12" and current_minute <= 30):
             subprocess.Popen([r"C:\Users\mirza\AppData\Roaming\Zoom\bin\Zoom.exe"])
             sleep(10)
             join_btn = pyautogui.locateOnScreen(r".\img\join.png", confidence=0.7)
@@ -83,7 +83,7 @@ if current_day == "Saturday":
     while not third:
         current_hour = now.strftime("%H")
         current_minute = int(now.strftime("%M"))
-        if current_hour == "11" or current_hour == "12" and current_minute >= 40 or current_minute <= 20:
+        if (current_hour == "12" and current_minute >= 40) or (current_hour == "13" or current_minute <= 20):
             subprocess.Popen([r"C:\Users\mirza\AppData\Roaming\Zoom\bin\Zoom.exe"])
             sleep(10)
             join_btn = pyautogui.locateOnScreen(r".\img\join.png", confidence=0.7)
@@ -122,7 +122,7 @@ elif current_day == "Sunday":
     while not second:
         current_hour = now.strftime("%H")
         current_minute = int(now.strftime("%M"))
-        if current_hour == "11" or current_hour == "12" and current_minute >= 50 or current_minute <= 30:
+        if (current_hour == "11" and current_minute >= 50) or (current_hour == "12" and current_minute <= 30):
             subprocess.Popen([r"C:\Users\mirza\AppData\Roaming\Zoom\bin\Zoom.exe"])
             sleep(10)
             join_btn = pyautogui.locateOnScreen(r".\img\join.png", confidence=0.7)
@@ -141,7 +141,7 @@ elif current_day == "Sunday":
     while not third:
         current_hour = now.strftime("%H")
         current_minute = int(now.strftime("%M"))
-        if current_hour == "11" or current_hour == "12" and current_minute >= 40 or current_minute <= 20:
+        if (current_hour == "12" and current_minute >= 40) or (current_hour == "13" or current_minute <= 20):
             subprocess.Popen([r"C:\Users\mirza\AppData\Roaming\Zoom\bin\Zoom.exe"])
             sleep(10)
             join_btn = pyautogui.locateOnScreen(r".\img\join.png", confidence=0.7)
@@ -180,7 +180,7 @@ elif current_day == "Monday":
     while not second:
         current_hour = now.strftime("%H")
         current_minute = int(now.strftime("%M"))
-        if current_hour == "11" or current_hour == "12" and current_minute >= 50 or current_minute <= 30:
+        if (current_hour == "11" and current_minute >= 50) or (current_hour == "12" and current_minute <= 30):
             subprocess.Popen([r"C:\Users\mirza\AppData\Roaming\Zoom\bin\Zoom.exe"])
             sleep(10)
             join_btn = pyautogui.locateOnScreen(r".\img\join.png", confidence=0.7)
@@ -199,7 +199,7 @@ elif current_day == "Monday":
     while not third:
         current_hour = now.strftime("%H")
         current_minute = int(now.strftime("%M"))
-        if current_hour == "11" or current_hour == "12" and current_minute >= 40 or current_minute <= 20:
+        if (current_hour == "12" and current_minute >= 40) or (current_hour == "13" or current_minute <= 20):
             subprocess.Popen([r"C:\Users\mirza\AppData\Roaming\Zoom\bin\Zoom.exe"])
             sleep(10)
             join_btn = pyautogui.locateOnScreen(r".\img\join.png", confidence=0.7)
@@ -238,7 +238,7 @@ elif current_day == "Tuesday":
     while not second:
         current_hour = now.strftime("%H")
         current_minute = int(now.strftime("%M"))
-        if current_hour == "11" or current_hour == "12" and current_minute >= 50 or current_minute <= 30:
+        if (current_hour == "11" and current_minute >= 50) or (current_hour == "12" and current_minute <= 30):
             subprocess.Popen([r"C:\Users\mirza\AppData\Roaming\Zoom\bin\Zoom.exe"])
             sleep(10)
             join_btn = pyautogui.locateOnScreen(r".\img\join.png", confidence=0.7)
@@ -257,7 +257,7 @@ elif current_day == "Tuesday":
     while not third:
         current_hour = now.strftime("%H")
         current_minute = int(now.strftime("%M"))
-        if current_hour == "11" or current_hour == "12" and current_minute >= 40 or current_minute <= 20:
+        if (current_hour == "12" and current_minute >= 40) or (current_hour == "13" or current_minute <= 20):
             subprocess.Popen([r"C:\Users\mirza\AppData\Roaming\Zoom\bin\Zoom.exe"])
             sleep(10)
             join_btn = pyautogui.locateOnScreen(r".\img\join.png", confidence=0.7)
@@ -296,7 +296,7 @@ elif current_day == "Wednesday":
     while not second:
         current_hour = now.strftime("%H")
         current_minute = int(now.strftime("%M"))
-        if current_hour == "11" or current_hour == "12" and current_minute >= 50 or current_minute <= 30:
+        if (current_hour == "11" and current_minute >= 50) or (current_hour == "12" and current_minute <= 30):
             subprocess.Popen([r"C:\Users\mirza\AppData\Roaming\Zoom\bin\Zoom.exe"])
             sleep(10)
             join_btn = pyautogui.locateOnScreen(r".\img\join.png", confidence=0.7)
@@ -315,7 +315,7 @@ elif current_day == "Wednesday":
     while not third:
         current_hour = now.strftime("%H")
         current_minute = int(now.strftime("%M"))
-        if current_hour == "11" or current_hour == "12" and current_minute >= 40 or current_minute <= 20:
+        if (current_hour == "12" and current_minute >= 40) or (current_hour == "13" or current_minute <= 20):
             subprocess.Popen([r"C:\Users\mirza\AppData\Roaming\Zoom\bin\Zoom.exe"])
             sleep(10)
             join_btn = pyautogui.locateOnScreen(r".\img\join.png", confidence=0.7)
@@ -354,7 +354,7 @@ elif current_day == "Thursday":
     while not second:
         current_hour = now.strftime("%H")
         current_minute = int(now.strftime("%M"))
-        if current_hour == "11" or current_hour == "12" and current_minute >= 50 or current_minute <= 30:
+        if (current_hour == "11" and current_minute >= 50) or (current_hour == "12" and current_minute <= 30):
             subprocess.Popen([r"C:\Users\mirza\AppData\Roaming\Zoom\bin\Zoom.exe"])
             sleep(10)
             join_btn = pyautogui.locateOnScreen(r".\img\join.png", confidence=0.7)
@@ -373,7 +373,7 @@ elif current_day == "Thursday":
     while not third:
         current_hour = now.strftime("%H")
         current_minute = int(now.strftime("%M"))
-        if current_hour == "11" or current_hour == "12" and current_minute >= 40 or current_minute <= 20:
+        if (current_hour == "12" and current_minute >= 40) or (current_hour == "13" or current_minute <= 20):
             subprocess.Popen([r"C:\Users\mirza\AppData\Roaming\Zoom\bin\Zoom.exe"])
             sleep(10)
             join_btn = pyautogui.locateOnScreen(r".\img\join.png", confidence=0.7)
