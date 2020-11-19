@@ -58,6 +58,14 @@ if current_day == "Saturday":
             pyautogui.typewrite(saturday_pass[0])
             pyautogui.press("enter")
             first = True
+        elif current_hour == "11" and current_minute > 40:
+            break
+        elif current_hour == "12" and current_minute > 30:
+            break
+        elif current_hour == "13" and current_minute > 20:
+            break
+        elif int(current_hour) > 13:
+            break
         else:
             continue
 
@@ -77,6 +85,14 @@ if current_day == "Saturday":
             pyautogui.typewrite(saturday_pass[1])
             pyautogui.press("enter")
             second = True
+        elif current_hour == "11" and current_minute > 40:
+            break
+        elif current_hour == "12" and current_minute > 30:
+            break
+        elif current_hour == "13" and current_minute > 20:
+            break
+        elif int(current_hour) > 13:
+            break
         else:
             continue
 
@@ -96,6 +112,14 @@ if current_day == "Saturday":
             pyautogui.typewrite(saturday_pass[2])
             pyautogui.press("enter")
             third = True
+        elif current_hour == "11" and current_minute > 40:
+            break
+        elif current_hour == "12" and current_minute > 30:
+            break
+        elif current_hour == "13" and current_minute > 20:
+            break
+        elif int(current_hour) > 13:
+            break
         else:
             continue
 
@@ -116,6 +140,14 @@ elif current_day == "Sunday":
             pyautogui.typewrite(sunday_pass[0])
             pyautogui.press("enter")
             first = True
+        elif current_hour == "11" and current_minute > 40:
+            break
+        elif current_hour == "12" and current_minute > 30:
+            break
+        elif current_hour == "13" and current_minute > 20:
+            break
+        elif int(current_hour) > 13:
+            break
         else:
             continue
 
@@ -135,6 +167,14 @@ elif current_day == "Sunday":
             pyautogui.typewrite(sunday_pass[1])
             pyautogui.press("enter")
             second = True
+        elif current_hour == "11" and current_minute > 40:
+            break
+        elif current_hour == "12" and current_minute > 30:
+            break
+        elif current_hour == "13" and current_minute > 20:
+            break
+        elif int(current_hour) > 13:
+            break
         else:
             continue
 
@@ -154,6 +194,14 @@ elif current_day == "Sunday":
             pyautogui.typewrite(sunday_pass[2])
             pyautogui.press("enter")
             third = True
+        elif current_hour == "11" and current_minute > 40:
+            break
+        elif current_hour == "12" and current_minute > 30:
+            break
+        elif current_hour == "13" and current_minute > 20:
+            break
+        elif int(current_hour) > 13:
+            break
         else:
             continue
 
@@ -174,6 +222,14 @@ elif current_day == "Monday":
             pyautogui.typewrite(monday_pass[0])
             pyautogui.press("enter")
             first = True
+        elif current_hour == "11" and current_minute > 40:
+            break
+        elif current_hour == "12" and current_minute > 30:
+            break
+        elif current_hour == "13" and current_minute > 20:
+            break
+        elif int(current_hour) > 13:
+            break
         else:
             continue
 
@@ -193,6 +249,14 @@ elif current_day == "Monday":
             pyautogui.typewrite(monday_pass[1])
             pyautogui.press("enter")
             second = True
+        elif current_hour == "11" and current_minute > 40:
+            break
+        elif current_hour == "12" and current_minute > 30:
+            break
+        elif current_hour == "13" and current_minute > 20:
+            break
+        elif int(current_hour) > 13:
+            break
         else:
             continue
 
@@ -212,6 +276,14 @@ elif current_day == "Monday":
             pyautogui.typewrite(monday_pass[2])
             pyautogui.press("enter")
             third = True
+        elif current_hour == "11" and current_minute > 40:
+            break
+        elif current_hour == "12" and current_minute > 30:
+            break
+        elif current_hour == "13" and current_minute > 20:
+            break
+        elif int(current_hour) > 13:
+            break
         else:
             continue
 
@@ -232,6 +304,14 @@ elif current_day == "Tuesday":
             pyautogui.typewrite(tuesday_pass[0])
             pyautogui.press("enter")
             first = True
+        elif current_hour == "11" and current_minute > 40:
+            break
+        elif current_hour == "12" and current_minute > 30:
+            break
+        elif current_hour == "13" and current_minute > 20:
+            break
+        elif int(current_hour) > 13:
+            break
         else:
             continue
 
@@ -251,6 +331,14 @@ elif current_day == "Tuesday":
             pyautogui.typewrite(tuesday_pass[1])
             pyautogui.press("enter")
             second = True
+        elif current_hour == "11" and current_minute > 40:
+            break
+        elif current_hour == "12" and current_minute > 30:
+            break
+        elif current_hour == "13" and current_minute > 20:
+            break
+        elif int(current_hour) > 13:
+            break
         else:
             continue
 
@@ -270,6 +358,14 @@ elif current_day == "Tuesday":
             pyautogui.typewrite(tuesday_pass[2])
             pyautogui.press("enter")
             third = True
+        elif current_hour == "11" and current_minute > 40:
+            break
+        elif current_hour == "12" and current_minute > 30:
+            break
+        elif current_hour == "13" and current_minute > 20:
+            break
+        elif int(current_hour) > 13:
+            break
         else:
             continue
 
@@ -290,6 +386,14 @@ elif current_day == "Wednesday":
             pyautogui.typewrite(wednesday_pass[0])
             pyautogui.press("enter")
             first = True
+        elif current_hour == "11" and current_minute > 40:
+            break
+        elif current_hour == "12" and current_minute > 30:
+            break
+        elif current_hour == "13" and current_minute > 20:
+            break
+        elif int(current_hour) > 13:
+            break
         else:
             continue
 
@@ -309,6 +413,14 @@ elif current_day == "Wednesday":
             pyautogui.typewrite(wednesday_pass[1])
             pyautogui.press("enter")
             second = True
+        elif current_hour == "11" and current_minute > 40:
+            break
+        elif current_hour == "12" and current_minute > 30:
+            break
+        elif current_hour == "13" and current_minute > 20:
+            break
+        elif int(current_hour) > 13:
+            break
         else:
             continue
 
@@ -328,6 +440,14 @@ elif current_day == "Wednesday":
             pyautogui.typewrite(wednesday_pass[2])
             pyautogui.press("enter")
             third = True
+        elif current_hour == "11" and current_minute > 40:
+            break
+        elif current_hour == "12" and current_minute > 30:
+            break
+        elif current_hour == "13" and current_minute > 20:
+            break
+        elif int(current_hour) > 13:
+            break
         else:
             continue
 
@@ -348,6 +468,14 @@ elif current_day == "Thursday":
             pyautogui.typewrite(thursday_pass[0])
             pyautogui.press("enter")
             first = True
+        elif current_hour == "11" and current_minute > 40:
+            break
+        elif current_hour == "12" and current_minute > 30:
+            break
+        elif current_hour == "13" and current_minute > 20:
+            break
+        elif int(current_hour) > 13:
+            break
         else:
             continue
 
@@ -367,6 +495,14 @@ elif current_day == "Thursday":
             pyautogui.typewrite(thursday_pass[1])
             pyautogui.press("enter")
             second = True
+        elif current_hour == "11" and current_minute > 40:
+            break
+        elif current_hour == "12" and current_minute > 30:
+            break
+        elif current_hour == "13" and current_minute > 20:
+            break
+        elif int(current_hour) > 13:
+            break
         else:
             continue
 
@@ -386,5 +522,13 @@ elif current_day == "Thursday":
             pyautogui.typewrite(thursday_pass[2])
             pyautogui.press("enter")
             third = True
+        elif current_hour == "11" and current_minute > 40:
+            break
+        elif current_hour == "12" and current_minute > 30:
+            break
+        elif current_hour == "13" and current_minute > 20:
+            break
+        elif int(current_hour) > 13:
+            break
         else:
             continue
