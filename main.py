@@ -32,16 +32,13 @@ tuesday_pass = list(tuesday.values())
 wednesday_pass = list(wednesday.values())
 thursday_pass = list(thursday.values())
 
-first = False
-second = False
-third = False
 
-now = datetime.now()
-current_day = now.strftime("%A")
+current = datetime.now()
+current_day = current.strftime("%A")
 
-# if statements for each day
 
-if current_day == "Saturday":
+def join_class(day_ids, day_pass):
+    first = False
     while not first:
         now = datetime.now()
         current_hour = now.strftime("%H")
@@ -53,10 +50,10 @@ if current_day == "Saturday":
             x, y = pyautogui.center(join_btn)
             pyautogui.click(x, y)
             sleep(3)
-            pyautogui.typewrite(saturday_ids[0])
+            pyautogui.typewrite(day_ids[0])
             pyautogui.press("enter")
             sleep(3)
-            pyautogui.typewrite(saturday_pass[0])
+            pyautogui.typewrite(day_pass[0])
             pyautogui.press("enter")
             first = True
         elif current_hour == "11" and current_minute > 40:
@@ -69,6 +66,7 @@ if current_day == "Saturday":
             continue
     print("First period")
 
+    second = False
     while not second:
         now = datetime.now()
         current_hour = now.strftime("%H")
@@ -80,10 +78,10 @@ if current_day == "Saturday":
             x, y = pyautogui.center(join_btn)
             pyautogui.click(x, y)
             sleep(3)
-            pyautogui.typewrite(saturday_ids[1])
+            pyautogui.typewrite(day_ids[1])
             pyautogui.press("enter")
             sleep(3)
-            pyautogui.typewrite(saturday_pass[1])
+            pyautogui.typewrite(day_pass[1])
             pyautogui.press("enter")
             second = True
         elif current_hour == "12" and current_minute > 30:
@@ -96,6 +94,7 @@ if current_day == "Saturday":
             continue
     print("Second period")
 
+    third = False
     while not third:
         now = datetime.now()
         current_hour = now.strftime("%H")
@@ -121,402 +120,22 @@ if current_day == "Saturday":
             continue
     print("Third period")
 
+
+# if statements for each day
+if current_day == "Saturday":
+    join_class(saturday_ids, saturday_pass)
+
 elif current_day == "Sunday":
-    while not first:
-        now = datetime.now()
-        current_hour = now.strftime("%H")
-        current_minute = int(now.strftime("%M"))
-        if current_hour == "11" and current_minute <= 40:
-            subprocess.Popen([r"C:\Users\mirza\AppData\Roaming\Zoom\bin\Zoom.exe"])
-            sleep(10)
-            join_btn = pyautogui.locateOnScreen(r".\img\join.png", confidence=0.7)
-            x, y = pyautogui.center(join_btn)
-            pyautogui.click(x, y)
-            sleep(3)
-            pyautogui.typewrite(sunday_ids[0])
-            pyautogui.press("enter")
-            sleep(3)
-            pyautogui.typewrite(sunday_pass[0])
-            pyautogui.press("enter")
-            first = True
-        elif current_hour == "11" and current_minute > 40:
-            break
-        elif int(current_hour) > 11:
-            break
-        elif int(current_hour) > 13:
-            break
-        else:
-            continue
-    print("First period")
-
-    while not second:
-        now = datetime.now()
-        current_hour = now.strftime("%H")
-        current_minute = int(now.strftime("%M"))
-        if (current_hour == "11" and current_minute >= 50) or (current_hour == "12" and current_minute <= 30):
-            subprocess.Popen([r"C:\Users\mirza\AppData\Roaming\Zoom\bin\Zoom.exe"])
-            sleep(10)
-            join_btn = pyautogui.locateOnScreen(r".\img\join.png", confidence=0.7)
-            x, y = pyautogui.center(join_btn)
-            pyautogui.click(x, y)
-            sleep(3)
-            pyautogui.typewrite(sunday_ids[1])
-            pyautogui.press("enter")
-            sleep(3)
-            pyautogui.typewrite(sunday_pass[1])
-            pyautogui.press("enter")
-            second = True
-        elif current_hour == "12" and current_minute > 30:
-            break
-        elif int(current_hour) > 12:
-            break
-        elif int(current_hour) > 13:
-            break
-        else:
-            continue
-    print("Second period")
-
-    while not third:
-        now = datetime.now()
-        current_hour = now.strftime("%H")
-        current_minute = int(now.strftime("%M"))
-        if (current_hour == "12" and current_minute >= 40) or (current_hour == "13" and current_minute <= 20):
-            subprocess.Popen([r"C:\Users\mirza\AppData\Roaming\Zoom\bin\Zoom.exe"])
-            sleep(10)
-            join_btn = pyautogui.locateOnScreen(r".\img\join.png", confidence=0.7)
-            x, y = pyautogui.center(join_btn)
-            pyautogui.click(x, y)
-            sleep(3)
-            pyautogui.typewrite(sunday_ids[2])
-            pyautogui.press("enter")
-            sleep(3)
-            pyautogui.typewrite(sunday_pass[2])
-            pyautogui.press("enter")
-            third = True
-        elif current_hour == "13" and current_minute > 20:
-            break
-        elif int(current_hour) > 13:
-            break
-        else:
-            continue
-    print("Third period")
+    join_class(sunday_ids, sunday_pass)
 
 elif current_day == "Monday":
-    while not first:
-        now = datetime.now()
-        current_hour = now.strftime("%H")
-        current_minute = int(now.strftime("%M"))
-        if current_hour == "11" and current_minute <= 40:
-            subprocess.Popen([r"C:\Users\mirza\AppData\Roaming\Zoom\bin\Zoom.exe"])
-            sleep(10)
-            join_btn = pyautogui.locateOnScreen(r".\img\join.png", confidence=0.7)
-            x, y = pyautogui.center(join_btn)
-            pyautogui.click(x, y)
-            sleep(3)
-            pyautogui.typewrite(monday_ids[0])
-            pyautogui.press("enter")
-            sleep(3)
-            pyautogui.typewrite(monday_pass[0])
-            pyautogui.press("enter")
-            first = True
-        elif current_hour == "11" and current_minute > 40:
-            break
-        elif int(current_hour) > 11:
-            break
-        elif int(current_hour) > 13:
-            break
-        else:
-            continue
-    print("First period")
-
-    while not second:
-        now = datetime.now()
-        current_hour = now.strftime("%H")
-        current_minute = int(now.strftime("%M"))
-        if (current_hour == "11" and current_minute >= 50) or (current_hour == "12" and current_minute <= 30):
-            subprocess.Popen([r"C:\Users\mirza\AppData\Roaming\Zoom\bin\Zoom.exe"])
-            sleep(10)
-            join_btn = pyautogui.locateOnScreen(r".\img\join.png", confidence=0.7)
-            x, y = pyautogui.center(join_btn)
-            pyautogui.click(x, y)
-            sleep(3)
-            pyautogui.typewrite(monday_ids[1])
-            pyautogui.press("enter")
-            sleep(3)
-            pyautogui.typewrite(monday_pass[1])
-            pyautogui.press("enter")
-            second = True
-        elif current_hour == "12" and current_minute > 30:
-            break
-        elif int(current_hour) > 12:
-            break
-        elif int(current_hour) > 13:
-            break
-        else:
-            continue
-    print("Second period")
-
-    while not third:
-        now = datetime.now()
-        current_hour = now.strftime("%H")
-        current_minute = int(now.strftime("%M"))
-        if (current_hour == "12" and current_minute >= 40) or (current_hour == "13" and current_minute <= 20):
-            subprocess.Popen([r"C:\Users\mirza\AppData\Roaming\Zoom\bin\Zoom.exe"])
-            sleep(10)
-            join_btn = pyautogui.locateOnScreen(r".\img\join.png", confidence=0.7)
-            x, y = pyautogui.center(join_btn)
-            pyautogui.click(x, y)
-            sleep(3)
-            pyautogui.typewrite(monday_ids[2])
-            pyautogui.press("enter")
-            sleep(3)
-            pyautogui.typewrite(monday_pass[2])
-            pyautogui.press("enter")
-            third = True
-        elif current_hour == "13" and current_minute > 20:
-            break
-        elif int(current_hour) > 13:
-            break
-        else:
-            continue
-    print("Third period")
+    join_class(monday_ids, monday_pass)
 
 elif current_day == "Tuesday":
-    while not first:
-        now = datetime.now()
-        current_hour = now.strftime("%H")
-        current_minute = int(now.strftime("%M"))
-        if current_hour == "11" and current_minute <= 40:
-            subprocess.Popen([r"C:\Users\mirza\AppData\Roaming\Zoom\bin\Zoom.exe"])
-            sleep(10)
-            join_btn = pyautogui.locateOnScreen(r".\img\join.png", confidence=0.7)
-            x, y = pyautogui.center(join_btn)
-            pyautogui.click(x, y)
-            sleep(3)
-            pyautogui.typewrite(tuesday_ids[0])
-            pyautogui.press("enter")
-            sleep(3)
-            pyautogui.typewrite(tuesday_pass[0])
-            pyautogui.press("enter")
-            first = True
-        elif current_hour == "11" and current_minute > 40:
-            break
-        elif int(current_hour) > 11:
-            break
-        elif int(current_hour) > 13:
-            break
-        else:
-            continue
-    print("First period")
-
-    while not second:
-        now = datetime.now()
-        current_hour = now.strftime("%H")
-        current_minute = int(now.strftime("%M"))
-        if (current_hour == "11" and current_minute >= 50) or (current_hour == "12" and current_minute <= 30):
-            subprocess.Popen([r"C:\Users\mirza\AppData\Roaming\Zoom\bin\Zoom.exe"])
-            sleep(10)
-            join_btn = pyautogui.locateOnScreen(r".\img\join.png", confidence=0.7)
-            x, y = pyautogui.center(join_btn)
-            pyautogui.click(x, y)
-            sleep(3)
-            pyautogui.typewrite(tuesday_ids[1])
-            pyautogui.press("enter")
-            sleep(3)
-            pyautogui.typewrite(tuesday_pass[1])
-            pyautogui.press("enter")
-            second = True
-        elif current_hour == "12" and current_minute > 30:
-            break
-        elif int(current_hour) > 12:
-            break
-        elif int(current_hour) > 13:
-            break
-        else:
-            continue
-    print("Second period")
-
-    while not third:
-        now = datetime.now()
-        current_hour = now.strftime("%H")
-        current_minute = int(now.strftime("%M"))
-        if (current_hour == "12" and current_minute >= 40) or (current_hour == "13" and current_minute <= 20):
-            subprocess.Popen([r"C:\Users\mirza\AppData\Roaming\Zoom\bin\Zoom.exe"])
-            sleep(10)
-            join_btn = pyautogui.locateOnScreen(r".\img\join.png", confidence=0.7)
-            x, y = pyautogui.center(join_btn)
-            pyautogui.click(x, y)
-            sleep(3)
-            pyautogui.typewrite(tuesday_ids[2])
-            pyautogui.press("enter")
-            sleep(3)
-            pyautogui.typewrite(tuesday_pass[2])
-            pyautogui.press("enter")
-            third = True
-        elif current_hour == "13" and current_minute > 20:
-            break
-        elif int(current_hour) > 13:
-            break
-        else:
-            continue
-    print("Third period")
+    join_class(tuesday_ids, tuesday_pass)
 
 elif current_day == "Wednesday":
-    while not first:
-        now = datetime.now()
-        current_hour = now.strftime("%H")
-        current_minute = int(now.strftime("%M"))
-        if current_hour == "11" and current_minute <= 40:
-            subprocess.Popen([r"C:\Users\mirza\AppData\Roaming\Zoom\bin\Zoom.exe"])
-            sleep(10)
-            join_btn = pyautogui.locateOnScreen(r".\img\join.png", confidence=0.7)
-            x, y = pyautogui.center(join_btn)
-            pyautogui.click(x, y)
-            sleep(3)
-            pyautogui.typewrite(wednesday_ids[0])
-            pyautogui.press("enter")
-            sleep(3)
-            pyautogui.typewrite(wednesday_pass[0])
-            pyautogui.press("enter")
-            first = True
-        elif current_hour == "11" and current_minute > 40:
-            break
-        elif int(current_hour) > 11:
-            break
-        elif int(current_hour) > 13:
-            break
-        else:
-            continue
-    print("First period")
-
-    while not second:
-        now = datetime.now()
-        current_hour = now.strftime("%H")
-        current_minute = int(now.strftime("%M"))
-        if (current_hour == "11" and current_minute >= 50) or (current_hour == "12" and current_minute <= 30):
-            subprocess.Popen([r"C:\Users\mirza\AppData\Roaming\Zoom\bin\Zoom.exe"])
-            sleep(10)
-            join_btn = pyautogui.locateOnScreen(r".\img\join.png", confidence=0.7)
-            x, y = pyautogui.center(join_btn)
-            pyautogui.click(x, y)
-            sleep(3)
-            pyautogui.typewrite(wednesday_ids[1])
-            pyautogui.press("enter")
-            sleep(3)
-            pyautogui.typewrite(wednesday_pass[1])
-            pyautogui.press("enter")
-            second = True
-        elif current_hour == "12" and current_minute > 30:
-            break
-        elif int(current_hour) > 12:
-            break
-        elif int(current_hour) > 13:
-            break
-        else:
-            continue
-    print("Second period")
-
-    while not third:
-        now = datetime.now()
-        current_hour = now.strftime("%H")
-        current_minute = int(now.strftime("%M"))
-        if (current_hour == "12" and current_minute >= 40) or (current_hour == "13" and current_minute <= 20):
-            subprocess.Popen([r"C:\Users\mirza\AppData\Roaming\Zoom\bin\Zoom.exe"])
-            sleep(10)
-            join_btn = pyautogui.locateOnScreen(r".\img\join.png", confidence=0.7)
-            x, y = pyautogui.center(join_btn)
-            pyautogui.click(x, y)
-            sleep(3)
-            pyautogui.typewrite(wednesday_ids[2])
-            pyautogui.press("enter")
-            sleep(3)
-            pyautogui.typewrite(wednesday_pass[2])
-            pyautogui.press("enter")
-            third = True
-        elif current_hour == "13" and current_minute > 20:
-            break
-        elif int(current_hour) > 13:
-            break
-        else:
-            continue
-    print("Third period")
+    join_class(wednesday_ids, wednesday_pass)
 
 elif current_day == "Thursday":
-    while not first:
-        now = datetime.now()
-        current_hour = now.strftime("%H")
-        current_minute = int(now.strftime("%M"))
-        if current_hour == "11" and current_minute <= 40:
-            subprocess.Popen([r"C:\Users\mirza\AppData\Roaming\Zoom\bin\Zoom.exe"])
-            sleep(10)
-            join_btn = pyautogui.locateOnScreen(r".\img\join.png", confidence=0.7)
-            x, y = pyautogui.center(join_btn)
-            pyautogui.click(x, y)
-            sleep(3)
-            pyautogui.typewrite(thursday_ids[0])
-            pyautogui.press("enter")
-            sleep(3)
-            pyautogui.typewrite(thursday_pass[0])
-            pyautogui.press("enter")
-            first = True
-        elif current_hour == "11" and current_minute > 40:
-            break
-        elif int(current_hour) > 11:
-            break
-        elif int(current_hour) > 13:
-            break
-        else:
-            continue
-    print("First period")
-
-    while not second:
-        now = datetime.now()
-        current_hour = now.strftime("%H")
-        current_minute = int(now.strftime("%M"))
-        if (current_hour == "11" and current_minute >= 50) or (current_hour == "12" and current_minute <= 30):
-            subprocess.Popen([r"C:\Users\mirza\AppData\Roaming\Zoom\bin\Zoom.exe"])
-            sleep(10)
-            join_btn = pyautogui.locateOnScreen(r".\img\join.png", confidence=0.7)
-            x, y = pyautogui.center(join_btn)
-            pyautogui.click(x, y)
-            sleep(3)
-            pyautogui.typewrite(thursday_ids[1])
-            pyautogui.press("enter")
-            sleep(3)
-            pyautogui.typewrite(thursday_pass[1])
-            pyautogui.press("enter")
-            second = True
-        elif current_hour == "12" and current_minute > 30:
-            break
-        elif int(current_hour) > 12:
-            break
-        elif int(current_hour) > 13:
-            break
-        else:
-            continue
-    print("Second period")
-
-    while not third:
-        now = datetime.now()
-        current_hour = now.strftime("%H")
-        current_minute = int(now.strftime("%M"))
-        if (current_hour == "12" and current_minute >= 40) or (current_hour == "13" and current_minute <= 20):
-            subprocess.Popen([r"C:\Users\mirza\AppData\Roaming\Zoom\bin\Zoom.exe"])
-            sleep(10)
-            join_btn = pyautogui.locateOnScreen(r".\img\join.png", confidence=0.7)
-            x, y = pyautogui.center(join_btn)
-            pyautogui.click(x, y)
-            sleep(3)
-            pyautogui.typewrite(thursday_ids[2])
-            pyautogui.press("enter")
-            sleep(3)
-            pyautogui.typewrite(thursday_pass[2])
-            pyautogui.press("enter")
-            third = True
-        elif current_hour == "13" and current_minute > 20:
-            break
-        elif int(current_hour) > 13:
-            break
-        else:
-            continue
-    print("Third period")
+    join_class(thursday_ids, thursday_pass)
